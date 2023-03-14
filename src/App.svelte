@@ -11,7 +11,7 @@
 >
   <header class="flex justify-center py-10">
     <h1 class="text-3xl font-bold text-blue-900 tracking-tighter">
-      chao<span class="text-blue-600">bg</span>
+      Plaremove<span class="text-blue-600">bg</span>
     </h1>
   </header>
 
@@ -23,8 +23,8 @@
     {/if}
   </main>
 
-  <footer class="flex justify-center items-center gap-x-2 font-semibold pt-10 mb-10">
-    Hecho con <a href="https://cloudinary.com" target="_blank" rel="noreferrer"
+  <footer class="flex justify-start items-center gap-x-2 font-semibold pt-10 mb-10">
+    Made with <a href="https://cloudinary.com" target="_blank" rel="noreferrer"
       ><CloudinaryLogo /></a>
     <a
       href="https://www.linkedin.com/in/marcos-pla/"
