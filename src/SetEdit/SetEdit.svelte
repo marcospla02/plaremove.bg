@@ -1,5 +1,6 @@
 <script lang="ts">
   import 'two-up-element'
+  import Swal from "sweetalert2"
 
   import { originalImage, modifiedImage } from "../Store/Store";
 
@@ -19,6 +20,15 @@
           clearInterval(intervalId)
         }
       }, 500)
+      if(tries > 50){
+          processingImage = false
+          clearInterval(intervalId)
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Perdon, si sale este alert significa que no puedo procesar mas imagenes, si quiere ver como funciona por favor mire el video.',
+          })
+      }
     }
   }
 </script>
@@ -30,7 +40,7 @@
       <p class="text-center mt-4">Procesando imagen...</p>
     </div>
   {:else}
-    <img src={$modifiedImage} alt="Imagen sin fondo subida por el usuario" />
+    <img src={$modifiedImage} alt="Imgen sin fondo" />
   {/if}
 </two-up>
 

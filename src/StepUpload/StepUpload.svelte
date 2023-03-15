@@ -6,6 +6,7 @@
   import Dropzone from "dropzone"
   import "dropzone/dist/dropzone.css"
   import { onMount } from "svelte"
+  import Swal from "sweetalert2"
   const cloudinary = new Cloudinary({
     cloud: {
       cloudName: "marcos02",
@@ -39,9 +40,12 @@
       modifiedImage.set(imageWithoutBackground.toURL())
       originalImage.set(url)
     })
-    dropzone.on("error", (file, response) => {
-      console.log("HA IDO MAL")
-      console.log(response)
+    dropzone.on("error", (file, response) => {       
+      Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: response,
+      })
     })
   })
 </script>
