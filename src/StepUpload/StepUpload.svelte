@@ -57,11 +57,11 @@
 >
   {#if $imageStatus === ImageStatus.READY}
     <button
-      class="font-bold pointer-events-none bg-blue-600 rounded-full text-bold text-white text-xl px-6 py-4"
+      class="font-bold pointer-events-none bg-blue-600 rounded-full text-bold text-white text-xl px-6 py-4 cursor-pointer"
     >
-      Upload files
+      Cargar archivo
     </button>
-    <strong class="text-lg mt-4 text-gray-800">or drop a file</strong>
+    <strong class="text-lg mt-4 text-gray-800">o suelte el archivo</strong>
   {:else if $imageStatus === ImageStatus.UPLOADING}
     <strong class="text-lg mt-4 text-gray-800">Uploading files...</strong>
   {/if}
